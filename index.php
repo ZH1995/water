@@ -14,9 +14,9 @@
 	        var minute = dateTime.getMinutes();
 	        var second = dateTime.getSeconds();  	
 
-	        mm = extra(mm);  
-	        ss = extra(ss);  
-	        document.getElementById("time").innerHTML = hh+":"+mm+":"+ss;  
+	        minute = extra(minute);  
+	        second = extra(second);  
+	        document.getElementById("time").innerHTML = hour+":"+minute+":"+second;  
 	        setTimeout("systemTime()",1000);  
 	        setTimeout("checkTime()",1000);  
 	    }  

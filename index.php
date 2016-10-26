@@ -29,15 +29,7 @@
 	        return x;  
 	    }  
 	    function checkTime() {
-			/*
-			var dateTime = new Date();  
-	        var year   = dateTime.getFullYear();
-	        var month  = dateTime.getMonth();
-	        var day    = dateTime.getDate();
-	        var hour   = dateTime.getHours();
-	        var minute = dateTime.getMinutes();
-	        var second = dateTime.getSeconds();  	
-	    	*/
+			
 	    	var timeStamp = Date.parse(new Date()) / 1000;
 	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 600)) {
 	    		document.getElementById("rush").disabled = false;

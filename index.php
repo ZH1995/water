@@ -31,7 +31,7 @@
 		<center>
 			<h1>抢票网站</h1>
 
-			<h3>下一波抢票时间为 <span style="color=red;">2016/10/30 19:00:00</span></h3>
+			<h3>下一波抢票时间为 <span style="color:red;">2016/10/30 19:00:00</span></h3>
 			<div id="time">
 			</div>
 			<br>

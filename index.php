@@ -3,26 +3,28 @@
 		<meta charset='utf-8'>
 		<title>抢票网站</title>
 		<script type='text/javascript' src='http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js'></script>
-		<script type="text/javascript">
-			function showTime() {
-				var dateTime = new Date();
-				var hh = dateTime.getHours();
-				var mm = dateTime.getMinutes();
-				var ss = dateTime.getSeconds();
-
-				mm = extra(mm);
-				ss = extra(ss);
-				document.getElementById("time").innerHTML = "当前时间是 "hh + ":" + mm + ":" + ss;
-				setTimeout("showTime()",1000);
-			}
-			function extra(num) {
-				if (num < 10) {
-					return "0" + x;
-				}
-				return x;
-			}
-		</script>
+		
 	</head>
+
+	<script type="text/javascript">
+		function showTime() {
+			var dateTime = new Date();
+			var hh = dateTime.getHours();
+			var mm = dateTime.getMinutes();
+			var ss = dateTime.getSeconds();
+
+			mm = extra(mm);
+			ss = extra(ss);
+			document.getElementById("time").innerHTML = "当前时间是 "hh + ":" + mm + ":" + ss;
+			setTimeout("showTime()",1000);
+		}
+		function extra(num) {
+			if (num < 10) {
+				return "0" + x;
+			}
+			return x;
+		}
+	</script>
 
 	<body onload="showTime()">
 		<center>

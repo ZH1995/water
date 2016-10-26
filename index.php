@@ -10,16 +10,13 @@
 
 	    function systemTime() {  
 	        var dateTime = new Date();  
-	        var year  = dateTime.getYear();
-	        var month = dateTime.getMonth();
-	        var day   = dateTime.getDay();
-	        var hh=dateTime.getHours();  
-	        var mm=dateTime.getMinutes();  
-	        var ss=dateTime.getSeconds();  
+	        var hour   = dateTime.getHours();
+	        var minute = dateTime.getMinutes();
+	        var second = dateTime.getSeconds();  	
 
 	        mm = extra(mm);  
 	        ss = extra(ss);  
-	        document.getElementById("time").innerHTML=year + "/" + month + "/" + day + " " + hh+":"+mm+":"+ss;  
+	        document.getElementById("time").innerHTML = hh+":"+mm+":"+ss;  
 	        setTimeout("systemTime()",1000);  
 	    }  
 	      
@@ -30,15 +27,22 @@
 	        return x;  
 	    }  
 	    function grabTicket() {
-	    	var dateTime=new Date();  
-	        var hh=dateTime.getHours();  
-	        var mm=dateTime.getMinutes();  
-	        var ss=dateTime.getSeconds();  
+			/*
+			var dateTime = new Date();  
+	        var year   = dateTime.getFullYear();
+	        var month  = dateTime.getMonth();
+	        var day    = dateTime.getDate();
+	        var hour   = dateTime.getHours();
+	        var minute = dateTime.getMinutes();
+	        var second = dateTime.getSeconds();  	
+	    	*/
+	    	var timeStamp = Date.parse(new Date());
+	    	if (timeStamp >= 1477478400 && timeStamp <= (1477478400 + 10)) {
+	    		document.getElementById("rush").disabled = false;
+	    	} else {
+	    		document.getElementById("rush").disabled = false;
+	    	}
 
-	        mm = extra(mm);  
-	        ss = extra(ss);  
-	    	
-	    	//if (hh == )
 	    }
 	</script>  
 

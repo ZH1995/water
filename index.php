@@ -6,7 +6,7 @@
 		
 	</head>
 
-	<script type="text/javascript">  
+	<script type="text/javascript">
 
 	    function systemTime() {  
 	        var dateTime = new Date();  
@@ -19,7 +19,6 @@
 	        document.getElementById("time").innerHTML = hour+":"+minute+":"+second;  
 	        setTimeout("systemTime()",1000);  
 	        checkTime();
-	        //setTimeout("checkTime()",1000);  
 	    }  
 	      
 	    function extra(x) {
@@ -29,14 +28,18 @@
 	        return x;  
 	    }  
 	    function checkTime() {
-			
+			document.getElementById("rush").disabled = false;
+	    	/*
 	    	var timeStamp = Date.parse(new Date()) / 1000;
 	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 600)) {
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
 	    		document.getElementById("rush").disabled = true;
 	    	}
-
+			*/
+	    }
+	    function goRob() {
+	    	window.location.href="./core/rob.php";
 	    }
 	</script>  
 
@@ -49,7 +52,7 @@
 			</div>
 			<br>
 			<div class='button'>
-				<button id="rush">立即抢票</button>
+				<button id="rush" onclick="goRob()">立即抢票</button>
 			</div>
 		<center>
 	</body>

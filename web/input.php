@@ -7,7 +7,6 @@
 	</head>
 
 	<script type="text/javascript">  
-
 	   
 	</script>  
 
@@ -15,8 +14,9 @@
 		<center>
 
 			<form action="../core/export.php" method="post">
-				影片名: <input type="text" name="movieName">
-				优惠码：<input type="text" name="coupon"> 
+				影片名: <input type="text" name="movieName"><br/>
+				优惠码：<input type="text" name="coupon"><br/>
+				开抢时间：<input type="text" name="robTime"><br/>
 				<input type="submit" value="提交">
 			</form>
 		<center>

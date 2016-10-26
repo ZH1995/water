@@ -18,6 +18,7 @@
 	        ss = extra(ss);  
 	        document.getElementById("time").innerHTML = hh+":"+mm+":"+ss;  
 	        setTimeout("systemTime()",1000);  
+	        setTimeout("checkTime()",1000);  
 	    }  
 	      
 	    function extra(x) {
@@ -26,7 +27,7 @@
 	        }  
 	        return x;  
 	    }  
-	    function grabTicket() {
+	    function checkTime() {
 			/*
 			var dateTime = new Date();  
 	        var year   = dateTime.getFullYear();
@@ -38,7 +39,7 @@
 	    	*/
 	    	var timeStamp = Date.parse(new Date());
 	    	alert(timeStamp);
-	    	if (timeStamp >= 1477478400 && timeStamp <= (1477478400 + 10)) {
+	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 10)) {
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
 	    		document.getElementById("rush").disabled = false;
@@ -56,7 +57,7 @@
 			</div>
 			<br>
 			<div class='button'>
-				<button id="rush" onload="grabTicket()">立即抢票</button>
+				<button id="rush">立即抢票</button>
 			</div>
 		<center>
 	</body>

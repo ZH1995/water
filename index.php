@@ -5,13 +5,13 @@
 		<script type='text/javascript' src='http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js'></script>
 	</head>
 	<body>
-		<h1>抢票网站</h1>
-		<div class='button'>
-			<button id="rush">立即抢票</button>
-		</div>
+		<center>
+			<h1>抢票网站</h1>
+			<div class='button'>
+				<button id="rush">立即抢票</button>
+			</div>
+		<center>
 	</body>
-
-
 
 	<script type='text/javascript'>
 		$(function() {

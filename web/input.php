@@ -13,6 +13,7 @@
 
 	<body>
 		<center>
+
 			<form action="../core/export.php" method="post">
 				影片名: <input type="text" name="movieName">
 				优惠码：<input type="text" name="coupon"> 

@@ -7,15 +7,19 @@
 	</head>
 
 	<script type="text/javascript">  
+
 	    function systemTime() {  
-	        var dateTime=new Date();  
+	        var dateTime = new Date();  
+	        var year  = dateTime.getYear();
+	        var month = dateTime.getMonth();
+	        var day   = dateTime.getDay();
 	        var hh=dateTime.getHours();  
 	        var mm=dateTime.getMinutes();  
 	        var ss=dateTime.getSeconds();  
 
 	        mm = extra(mm);  
 	        ss = extra(ss);  
-	        document.getElementById("time").innerHTML=hh+":"+mm+":"+ss;  
+	        document.getElementById("time").innerHTML=year + "/" + month + "/" + day + " " + hh+":"+mm+":"+ss;  
 	        setTimeout("systemTime()",1000);  
 	    }  
 	      
@@ -25,6 +29,17 @@
 	        }  
 	        return x;  
 	    }  
+	    function grabTicket() {
+	    	var dateTime=new Date();  
+	        var hh=dateTime.getHours();  
+	        var mm=dateTime.getMinutes();  
+	        var ss=dateTime.getSeconds();  
+
+	        mm = extra(mm);  
+	        ss = extra(ss);  
+	    	
+	    	//if (hh == )
+	    }
 	</script>  
 
 	<body onload="systemTime()">
@@ -36,7 +51,7 @@
 			</div>
 			<br>
 			<div class='button'>
-				<button id="rush">立即抢票</button>
+				<button id="rush" onload="grabTicket">立即抢票</button>
 			</div>
 		<center>
 	</body>

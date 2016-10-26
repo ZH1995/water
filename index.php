@@ -38,9 +38,8 @@
 	        var minute = dateTime.getMinutes();
 	        var second = dateTime.getSeconds();  	
 	    	*/
-	    	var timeStamp = Date.parse(new Date());
+	    	var timeStamp = Date.parse(new Date()) / 1000;
 	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 600)) {
-	    		
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
 	    		document.getElementById("rush").disabled = true;

@@ -37,6 +37,7 @@
 	        var second = dateTime.getSeconds();  	
 	    	*/
 	    	var timeStamp = Date.parse(new Date());
+	    	alert(timeStamp);
 	    	if (timeStamp >= 1477478400 && timeStamp <= (1477478400 + 10)) {
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
@@ -55,7 +56,7 @@
 			</div>
 			<br>
 			<div class='button'>
-				<button id="rush" onload="grabTicket">立即抢票</button>
+				<button id="rush" onload="grabTicket()">立即抢票</button>
 			</div>
 		<center>
 	</body>

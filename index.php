@@ -41,7 +41,7 @@
 	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 10)) {
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
-	    		document.getElementById("rush").disabled = false;
+	    		document.getElementById("rush").disabled = true;
 	    	}
 
 	    }

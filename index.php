@@ -19,6 +19,7 @@
 	        document.getElementById("time").innerHTML = hour+":"+minute+":"+second;  
 	        setTimeout("systemTime()",1000);  
 	        checkTime();
+	        getNextStartTime();
 	    }  
 	      
 	    function extra(x) {
@@ -41,13 +42,31 @@
 	    function goRob() {
 	    	window.location.href="./core/rob.php";
 	    }
+
+	    function getNextStartTime() {
+	    	var xmlhttp;
+	    	if (window.XMLHttpRequest) {
+		  		xmlhttp = new XMLHttpRequest();
+		  	} else {
+		  		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		  	xmlhttp.onreadystatechange=function() {
+		  		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		  			document.getElementById("nextStartTime").innerHTML = xmlhttp.responseText;
+		  		}
+		  	}
+		  	xmlhttp.open("POST", "./core/getNextTime.php", true);
+		  	xmlhttp.send();
+	    }
+
+
 	</script>  
 
 	<body onload="systemTime()">
 		<center>
 			<h1>抢票网站</h1>
 
-			<h3>下一波抢票时间为 <span style="color:red;">2016/10/30 19:00:00</span></h3>
+			<h3>下一波抢票时间为 <span style="color:red;" id="nextStartTime"></span></h3>
 			<div id="time">
 			</div>
 			<br>

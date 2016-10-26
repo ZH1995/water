@@ -18,7 +18,8 @@
 	        second = extra(second);  
 	        document.getElementById("time").innerHTML = hour+":"+minute+":"+second;  
 	        setTimeout("systemTime()",1000);  
-	        setTimeout("checkTime()",1000);  
+	        checkTime();
+	        //setTimeout("checkTime()",1000);  
 	    }  
 	      
 	    function extra(x) {
@@ -38,7 +39,8 @@
 	        var second = dateTime.getSeconds();  	
 	    	*/
 	    	var timeStamp = Date.parse(new Date());
-	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 300)) {
+	    	if (timeStamp >= 1477479000 && timeStamp <= (1477479000 + 600)) {
+	    		
 	    		document.getElementById("rush").disabled = false;
 	    	} else {
 	    		document.getElementById("rush").disabled = true;

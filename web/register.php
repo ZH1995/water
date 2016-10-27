@@ -7,20 +7,18 @@
 	</head>
 
 	<script type="text/javascript">
-		function goRegister() {
-			window.location.href="register.php";
-		}
+		
 	</script>  
 
 	<body>
 		<center>
 			
-			<form action="../core/login.php" method="post">
+			<form action="../core/register.php" method="post">
 				邮箱: <input type="text" name="email"><br/>
 				密码：<input type="text" name="password"><br/>
+				昵称：<input type="text" name="name"><br/>
 				<input type="submit" value="提交">
 			</form>
-			<button id="register" onclik="goRegister()">注册</button>
 		<center>
 	</body>
 </html>
